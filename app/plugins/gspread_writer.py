@@ -86,6 +86,8 @@ class GSpreadWriter(object):
             * row 11: `専門科目` str_list
             '''
             worksheet = self._sheet.sheet1
+            l = worksheet.range('A2:Z2')
+            print(l)
             try:
                 print("90行目 before column {}".format(name))
                 column = worksheet.find(name).col
