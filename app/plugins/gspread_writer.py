@@ -87,12 +87,12 @@ class GSpreadWriter(object):
             '''
             worksheet = self._sheet.sheet1
             try:
-                print("90行目 before column")
+                print("90行目 before column {}".format(name))
                 column = worksheet.find(name).col
                 print("92行目 after column")
             except gspread.exceptions.CellNotFound:
                 column = worksheet.col_count+1
-                print("95行目 exception handling{}".format(column))
+                print("95行目 exception handling {}".format(column))
                 
             for row in range(3,12):
                 print("98行目 row: {}".format(row))
